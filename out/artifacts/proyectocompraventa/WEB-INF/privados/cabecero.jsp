@@ -31,6 +31,9 @@
     <link href="${pageContext.request.contextPath}/public/datatables/buttons.dataTables.min.css" rel="stylesheet"/>
     <link href="${pageContext.request.contextPath}/public/datatables/responsive.dataTables.min.css" rel="stylesheet"/>
 
+    <!--Sweet alert-->
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/public/css/sweetalert2.min.css">
+
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/public/css/bootstrap-select.min.css">
 
 </head>

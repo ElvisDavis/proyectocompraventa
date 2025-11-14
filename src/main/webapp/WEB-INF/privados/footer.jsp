@@ -21,6 +21,9 @@
 <script src="${pageContext.request.contextPath}/public/datatables/pdfmake.min.js"></script>
 <script src="${pageContext.request.contextPath}/public/datatables/vfs_fonts.js"></script>
 
+<!--Sweet alert-->
+<script src="${pageContext.request.contextPath}/public/js/sweetalert2.all.min.js"></script>
+
 
 
 </body>

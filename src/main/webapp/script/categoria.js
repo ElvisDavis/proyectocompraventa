@@ -6,7 +6,8 @@ function init(){
     listar();
 
     $("#formulario").on("submit",function(e){
-        gurdaryeditar(e);
+        e.preventDefault();
+        guardarCategoria();
     })
 
 }
@@ -69,6 +70,31 @@ function listar(){
         "order": [[0, "desc"]]
     });
 
+}
+
+//Función para guardar categoria
+function guardarCategoria(){
+    var formData= new FormData($("formulario")[0]);
+
+    $.ajax({
+        url:"categoria",
+        type: "POST",
+        data: formData,
+        contentType:false,
+        processData: false,
+        success:function (response) {
+            //Mensaje de exito
+            Swal.fire("Categoria Registrada" , "" , "success");
+            limpiar();
+            mostrarform(false);
+            tabla.ajax.reload();
+
+        },
+        error:function(error){
+            console.error("Error al guardar: " ,error.responseText);
+            Swal.fire("Error al guardar :", error.responseText, "error");
+        }
+    })
 }
 
 init();

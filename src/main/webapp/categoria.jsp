@@ -1,5 +1,6 @@
 <%@ page import="java.util.Optional,org.elvis.proyectocompraventa.controllers.models.Categoria" %>
 <%@ page import="java.util.List" %>
+<%@ page import="paquete.Clase1, paquete.ClaseN" %>
 <%
     List<Categoria> categorias=(List<Categoria>) request.getAttribute("categorias");
     Optional<String> username=(Optional<String>)request.getAttribute("username");

@@ -44,6 +44,24 @@ public class CategoriaServlet extends HttpServlet {
 
     }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Connection conn = (Connection) req.getAttribute("conn");
+        CategoriaService service = new CategoriaServiceJdbcImplement(conn);
+
+        Long idCategoria=Long.parseLong(req.getParameter("idCategoria"));
+        String nombre = req.getParameter("nombre");
+        String descripcion = req.getParameter("descripcion");
+
+
+
+        Categoria categoria = new Categoria();
+       /* if (idCategoria !=null && !idCategoria.trim().isEmpty()){
+            categoria.setIdCategoria(idCategoria);
+
+        }*/
+    }
+
     private void enviarComoJson(HttpServletResponse response, List<Categoria> categorias)throws IOException{
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
